@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hitchhiker101</title>
+  <link rel="stylesheet" href="Stylish.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <div class="left-section">
+      <h1 class="site-title">Hitchhiker101</h1>
+      <p class="subtitle">Your tourist guide to 5+ cities!</p>
+    </div>
+
+    <div class="right-section">
+      <input class="search-input" placeholder="City name..." />
+      <button class="nav-button" onclick="Search()">Search</button>
+      <button class="nav-button" onclick="Start_Agent()">Agent</button>
+    </div>
+
+    <button id="mode-toggle" onclick="Change_Background_Color()">☀️</button>
+  </div>
+
+  <div id="city-card"></div>
+
+  
+  <script src="App.ts"></script>
+</body>
+
+</html>
