@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Tokyo",
+        "country": "Japan",
+        "image": "images/tokyo.jpg",
+        "description": "A vibrant city blending ultramodern and traditional culture, with neon-lit skyscrapers and historic temples.",
+        "currency": "JPY",
+        "timezone": "Asia/Tokyo"
+    },
+    {
+        "id": 2,
+        "name": "Paris",
+        "country": "France",
+        "image": "images/paris.jpg",
+        "description": "The romantic capital of France, known for its cafes, fashion, and the iconic Eiffel Tower.",
+        "currency": "EUR",
+        "timezone": "Europe/Paris"
+    },
+    {
+        "id": 3,
+        "name": "New York",
+        "country": "USA",
+        "image": "images/newyork.jpg",
+        "description": "The city that never sleeps, home to Broadway, Wall Street, and endless skyscrapers.",
+        "currency": "USD",
+        "timezone": "America/New_York"
+    },
+    {
+        "id": 4,
+        "name": "Cairo",
+        "country": "Egypt",
+        "image": "images/cairo.jpg",
+        "description": "A historical capital located near the pyramids of Giza and the Nile River.",
+        "currency": "EGP",
+        "timezone": "Africa/Cairo"
+    },
+    {
+        "id": 5,
+        "name": "Sydney",
+        "country": "Australia",
+        "image": "images/sydney.jpg",
+        "description": "A scenic harbor city famous for the Opera House, beaches, and diverse culture.",
+        "currency": "AUD",
+        "timezone": "Australia/Sydney"
+    }
+]

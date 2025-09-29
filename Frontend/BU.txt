@@ -1,0 +1,16 @@
+  <div class="city-card">
+  <img src="Pictures/‏tokyo.JPG" alt="Tokyo" class="city-image" />
+  <div class="city-info">
+    <h2>Tokyo</h2>
+    <p class="country">🇯🇵 Japan</p>
+    <p class="description">A bustling metropolis with ancient temples...</p>
+    <p class="weather">🌤️ 25°C, Sunny</p>
+    <p class="local-time">🕒 Local Time: 14:30</p>
+
+    <div class="currency-converter">
+      <input type="number" placeholder="Amount in USD" />
+      <button onclick="convertToLocal('JPY')">Convert to JPY</button>
+      <p class="converted-amount"></p>
+    </div>
+  </div>
+</div>

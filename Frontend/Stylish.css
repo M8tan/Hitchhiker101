@@ -1,0 +1,142 @@
+body {
+  background-color: lightblue;
+  color: black;
+  margin: 0;
+  padding-top: 80px; /* bar height */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.Dark_Mode {
+  background-color: black;
+  color: white;
+}
+
+/* Top bar container */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Left section: title and subtitle */
+.left-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 22px;
+  color: white;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #ecf0f1;
+}
+
+/* Right section: input and buttons */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 60px;
+}
+
+.Search_Input {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  width: 160px;
+}
+.Search_Input:hover{
+  border-radius: 0;
+}
+.nav-button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #2980b9;
+  border-radius: 0;
+}
+
+#mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  padding: 0;
+  background-color: #2c3e50;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#mode-toggle:hover{
+  font-size: 22px;
+}
+
+#Agent_Container{
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 80px; /* above the toggle button */
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: darkgray;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  flex-direction: column;
+}
+#Agent_Chat_Log{
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+.Agent_Chat_Interactive_Parts{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.Agent_Chat_Interactive_Parts input{
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.Agent_Chat_Interactive_Parts button{
+  padding: 8px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

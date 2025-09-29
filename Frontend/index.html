@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hitchhiker101</title>
+  <link rel="stylesheet" href="Stylish.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <div class="left-section">
+      <h1 class="site-title">Hitchhiker101</h1>
+      <p class="subtitle">Your tourist guide to over 50 cities worldwide!</p>
+    </div>
+
+    <div class="right-section">
+      <input class="Search_Input" placeholder="City name..." oninput="handleSearch()"/>
+      <button class="nav-button" onclick="Search_Cities()">Search</button>
+      <button class="nav-button" onclick="Start_Agent()">All</button>
+      <button class="nav-button" onclick="Start_Agent()">Agent</button>
+
+    </div>
+
+    <button id="mode-toggle" onclick="Change_Background_Color()">☀️</button>
+  </div>
+
+  <div id="Agent_Container">
+    <div id="Agent_Chat_Log">
+
+    </div>
+    <div class="Agent_Chat_Interactive_Parts">
+    <input type="text" placeholder="Name" id="Agent_Name_Textbox">
+    <input type="text" placeholder="Message" id="Agent_Message_Textbox">
+    <button id="Agent_Send_Button" onclick="Agent_Send_Message()">Send</button>
+  </div>
+  </div>
+
+  <div id="cities-container" class="card-grid"></div>
+
+  
+  <script src="App.js"></script>
+</body>
+
+</html>

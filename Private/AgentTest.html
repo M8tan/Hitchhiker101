@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Widget</title>
+  <style>
+    /* Floating button to open chat */
+    #toggleChatBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    /* Chat container */
+    #chatWidget {
+      display: none; /* Hidden by default */
+      position: fixed;
+      bottom: 80px; /* above the toggle button */
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Chat log area */
+    .chat-log {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    /* Inputs and button container */
+    .chat-inputs {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .chat-inputs input {
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .chat-inputs button {
+      padding: 8px;
+      font-size: 14px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .chat-inputs button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Toggle Chat Button -->
+<button id="toggleChatBtn">Chat</button>
+
+<!-- Chat Widget -->
+<div id="chatWidget">
+  <div class="chat-log" id="chatLog">
+    <!-- Messages will appear here -->
+  </div>
+  <div class="chat-inputs">
+    <input type="text" id="nameInput" placeholder="Your name">
+    <input type="text" id="messageInput" placeholder="Type a message">
+    <button id="sendBtn">Send</button>
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggleChatBtn');
+  const chatWidget = document.getElementById('chatWidget');
+  const sendBtn = document.getElementById('sendBtn');
+  const nameInput = document.getElementById('nameInput');
+  const messageInput = document.getElementById('messageInput');
+  const chatLog = document.getElementById('chatLog');
+
+  toggleBtn.addEventListener('click', () => {
+    // Toggle chat visibility
+    chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none';
+  });
+
+  sendBtn.addEventListener('click', () => {
+    const name = nameInput.value.trim();
+    const message = messageInput.value.trim();
+    if (!name || !message) return;
+
+    const msgDiv = document.createElement('div');
+    msgDiv.textContent = `${name}: ${message}`;
+    chatLog.appendChild(msgDiv);
+
+    // Scroll to bottom
+    chatLog.scrollTop = chatLog.scrollHeight;
+
+    // Clear message input
+    messageInput.value = '';
+  });
+</script>
+
+</body>
+</html>
